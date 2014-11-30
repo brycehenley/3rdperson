@@ -43,9 +43,10 @@
 		<Camera name="Camera1">
 			<active value="true" />
 			<transform 
-				position="13.393950 -7.806477 48.980679"
+				parent="head"
+				position="4.106888 -14.442066 -0.703705"
 				rotation="90.000000 -0.000000 0.000000"
-				scale="1.000000 1.000000 1.000000" />
+				scale="10.189013 10.189014 10.189014" />
 			<properties 
 				clearColor="0.200000 0.300000 0.400000"
 				fogColor="1.000000 1.000000 1.000000"
@@ -106,29 +107,15 @@
 				shadow="true"
 				occluder="false" />
 		</Entity>
-		<Entity name="head" file="../meshs/box.mesh">
-			<BoundingBox min="-1.000000 -1.000001 -1.000000" max="1.000000 1.000000 1.000000" />
-			<anim id="0" />
-			<active value="true" />
-			<transform 
-				parent="bob"
-				position="-0.029556 -0.023138 -4.523926"
-				rotation="0.000000 -0.000000 0.000000"
-				scale="0.500000 0.500000 0.500000" />
-			<properties 
-				invisible="true"
-				shadow="true"
-				occluder="false" />
-		</Entity>
 		<Entity name="bob" file="../meshs/robotMESH.mesh">
 			<BoundingBox min="-0.888043 -0.671408 -8.611580" max="0.950836 0.984874 -4.280010" />
 			<anim id="0" />
 			<active value="true" />
 			<transform 
 				parent="Feet"
-				position="0.000000 -0.000004 8.255585"
+				position="0.000000 -0.000004 3.264000"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="1.074766 1.074766 1.074766" />
+				scale="2.241582 2.085647 0.504421" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -152,10 +139,41 @@
 			<anim id="0" />
 			<active value="true" />
 			<transform 
-				parent="Camera1"
-				position="-0.399985 -0.631481 -1.416794"
-				rotation="-90.000000 -0.000000 0.000000"
-				scale="0.186087 0.186087 0.186087" />
+				position="12.986405 -6.362905 48.596954"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="0.100000 0.100000 0.400000" />
+			<properties 
+				invisible="true"
+				shadow="true"
+				occluder="false" />
+			<physics 
+				shape="Sphere"
+				ghost="false"
+				mass="100.000000"
+				friction="0.500000"
+				restitution="1.000000"
+				linearDamping="1.000000"
+				angularDamping="1.000000"
+				angularFactor="1.000000"
+				linearFactor="1.000000 1.000000 1.000000" />
+			<constraint 
+				parent=""
+				pivot="1.000000 1.000000 1.000000"
+				lowerLinearLimit="0.000000 0.000000 0.000000"
+				upperLinearLimit="0.000000 0.000000 0.000000"
+				lowerAngularLimit="1.000000 1.000000 1.000000"
+				upperAngularLimit="10.000000 10.000000 10.000000"
+				disableParentCollision="true" />
+		</Entity>
+		<Entity name="head" file="../meshs/box.mesh">
+			<BoundingBox min="-1.000000 -1.000001 -1.000000" max="1.000000 1.000000 1.000000" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				parent="bob"
+				position="-0.014023 0.003040 -4.220245"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="0.446113 0.479467 0.495618" />
 			<properties 
 				invisible="true"
 				shadow="true"
