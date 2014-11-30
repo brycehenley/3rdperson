@@ -1,0 +1,169 @@
+<Maratis version="3.1">
+
+<Level>
+
+	<properties currentScene="0" />
+
+	<Scene name="Scene-1">
+
+		<script file="../scripts/person.lua" />
+		<properties 
+			data="Static"
+			gravity="0.000000 0.000000 -0.981000"
+			ambientLight="0.000000 0.000000 0.000000" />
+
+		<Light name="Light0">
+			<active value="true" />
+			<transform 
+				position="-65.727539 76.478737 72.978867"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="1.000000 1.000000 1.000000" />
+			<properties 
+				radius="1000.000000"
+				color="1.000000 1.000000 1.000000"
+				intensity="1.000000"
+				spotAngle="180.000000"
+				spotExponent="0.000000"
+				shadow="false" />
+		</Light>
+		<Light name="Light1">
+			<active value="true" />
+			<transform 
+				position="71.571335 -60.419296 64.702553"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="1.000000 1.000000 1.000000" />
+			<properties 
+				radius="1000.000000"
+				color="1.000000 1.000000 1.000000"
+				intensity="1.000000"
+				spotAngle="180.000000"
+				spotExponent="0.000000"
+				shadow="false" />
+		</Light>
+		<Camera name="Camera1">
+			<active value="true" />
+			<transform 
+				position="13.393950 -7.806477 48.980679"
+				rotation="90.000000 -0.000000 0.000000"
+				scale="1.000000 1.000000 1.000000" />
+			<properties 
+				clearColor="0.200000 0.300000 0.400000"
+				fogColor="1.000000 1.000000 1.000000"
+				ortho="false"
+				fov="60.000000"
+				clippingNear="0.100000"
+				clippingFar="1000.000000"
+				fog="false"
+				fogDistance="0.000000"
+				skyboxTextures="" />
+		</Camera>
+		<Entity name="Entity0" file="../meshs/pirateblock2.0.mesh">
+			<BoundingBox min="-11.744656 -10.623383 -9.759061" max="12.622906 10.816217 17.588280" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				position="0.000000 0.000000 0.000000"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="5.000000 5.000000 5.000000" />
+			<properties 
+				invisible="false"
+				shadow="true"
+				occluder="false" />
+			<physics 
+				shape="TriangleMesh"
+				ghost="false"
+				mass="0.000000"
+				friction="0.500000"
+				restitution="0.000000"
+				linearDamping="0.010000"
+				angularDamping="0.010000"
+				angularFactor="1.000000"
+				linearFactor="1.000000 1.000000 1.000000" />
+		</Entity>
+		<Entity name="Entity1" file="../meshs/dome.mesh">
+			<BoundingBox min="7.215153 5.119732 12.512133" max="9.457201 7.361780 15.943202" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				position="0.000000 0.000000 0.000000"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="5.000000 5.000000 5.000000" />
+			<properties 
+				invisible="false"
+				shadow="true"
+				occluder="false" />
+		</Entity>
+		<Entity name="Entity2" file="../meshs/obsbuilding.mesh">
+			<BoundingBox min="5.654829 6.511852 12.506319" max="8.455041 9.312063 14.484559" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				position="0.000000 0.000000 0.000000"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="5.000000 5.000000 5.000000" />
+			<properties 
+				invisible="false"
+				shadow="true"
+				occluder="false" />
+		</Entity>
+		<Entity name="head" file="../meshs/box.mesh">
+			<BoundingBox min="-1.000000 -1.000001 -1.000000" max="1.000000 1.000000 1.000000" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				parent="bob"
+				position="-0.029556 -0.023138 -4.523926"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="0.500000 0.500000 0.500000" />
+			<properties 
+				invisible="true"
+				shadow="true"
+				occluder="false" />
+		</Entity>
+		<Entity name="bob" file="../meshs/robotMESH.mesh">
+			<BoundingBox min="-0.888043 -0.671408 -8.611580" max="0.950836 0.984874 -4.280010" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				parent="Feet"
+				position="0.000000 -0.000004 8.255585"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="1.074766 1.074766 1.074766" />
+			<properties 
+				invisible="false"
+				shadow="true"
+				occluder="false" />
+		</Entity>
+		<Entity name="Entity3" file="../meshs/person.mesh">
+			<BoundingBox min="5.644352 7.498306 14.084907" max="5.697508 7.551462 14.263642" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				position="0.000000 0.000000 0.000000"
+				rotation="0.000000 -0.000000 0.000000"
+				scale="5.000000 5.000000 5.000000" />
+			<properties 
+				invisible="false"
+				shadow="true"
+				occluder="false" />
+		</Entity>
+		<Entity name="Feet" file="../meshs/box.mesh">
+			<BoundingBox min="-1.000000 -1.000001 -1.000000" max="1.000000 1.000000 1.000000" />
+			<anim id="0" />
+			<active value="true" />
+			<transform 
+				parent="Camera1"
+				position="-0.399985 -0.631481 -1.416794"
+				rotation="-90.000000 -0.000000 0.000000"
+				scale="0.186087 0.186087 0.186087" />
+			<properties 
+				invisible="true"
+				shadow="true"
+				occluder="false" />
+		</Entity>
+
+	</Scene>
+
+</Level>
+
+</Maratis>

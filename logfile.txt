@@ -1,0 +1,5 @@
+Log tracked at level :6
+[ Info ] Neo Player version:	v0.4 in main in main.cpp
+[ Info ] Renderer: 4.4.0 NVIDIA 331.89 in StandardRenderer in StandardRenderer.cpp
+[ Info ] Renderer: 4.4.0 NVIDIA 331.89 in StandardRenderer in StandardRenderer.cpp
+[ Info ] Update thread returned with exit code 0 in main in main.cpp
