@@ -93,6 +93,16 @@
 				invisible="false"
 				shadow="true"
 				occluder="false" />
+			<physics 
+				shape="TriangleMesh"
+				ghost="false"
+				mass="0.000000"
+				friction="0.500000"
+				restitution="0.000000"
+				linearDamping="0.010000"
+				angularDamping="0.010000"
+				angularFactor="1.000000"
+				linearFactor="1.000000 1.000000 1.000000" />
 		</Entity>
 		<Entity name="Entity2" file="../meshs/obsbuilding.mesh">
 			<BoundingBox min="5.654829 6.511852 12.506319" max="8.455041 9.312063 14.484559" />
@@ -106,6 +116,16 @@
 				invisible="false"
 				shadow="true"
 				occluder="false" />
+			<physics 
+				shape="TriangleMesh"
+				ghost="false"
+				mass="0.000000"
+				friction="0.500000"
+				restitution="0.000000"
+				linearDamping="0.010000"
+				angularDamping="0.010000"
+				angularFactor="1.000000"
+				linearFactor="1.000000 1.000000 1.000000" />
 		</Entity>
 		<Entity name="bob" file="../meshs/robotMESH.mesh">
 			<BoundingBox min="-0.888043 -0.671408 -8.611580" max="0.950836 0.984874 -4.280010" />
@@ -113,7 +133,7 @@
 			<active value="true" />
 			<transform 
 				parent="Feet"
-				position="0.000000 -0.000004 3.264000"
+				position="0.000000 -0.000004 3.331963"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="2.241582 2.085647 0.504421" />
 			<properties 
@@ -139,7 +159,7 @@
 			<anim id="0" />
 			<active value="true" />
 			<transform 
-				position="12.986405 -6.362905 48.596954"
+				position="12.986405 -6.362905 48.600002"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="0.100000 0.100000 0.400000" />
 			<properties 
@@ -149,11 +169,11 @@
 			<physics 
 				shape="Sphere"
 				ghost="false"
-				mass="100.000000"
+				mass="60.000000"
 				friction="0.500000"
 				restitution="1.000000"
-				linearDamping="1.000000"
-				angularDamping="1.000000"
+				linearDamping="0.100000"
+				angularDamping="0.100000"
 				angularFactor="1.000000"
 				linearFactor="1.000000 1.000000 1.000000" />
 			<constraint 
@@ -171,7 +191,7 @@
 			<active value="true" />
 			<transform 
 				parent="bob"
-				position="-0.014023 0.003040 -4.220245"
+				position="-0.014023 0.003038 -4.370071"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="0.446113 0.479467 0.495618" />
 			<properties 
