@@ -36,26 +36,26 @@ function onSceneUpdate()
 	hideCursor()
 
 	-- CHARACTER CONTROLER
-	if isCollisionBetween(player, pblock) == true then
-		if isKeyPressed("W") then translate(player, {0.0, 1.0, 0.0}, "local") end
-		if isKeyPressed("S") then translate(player, {0.0, -1.0, 0.0}, "local") end
-		if isKeyPressed("A") then translate(player, {-1.0, 0.0, 0.0}, "local") end
-		if isKeyPressed("D") then translate(player, {1.0, 0.0, 0.0}, "local") end
+	-- if isCollisionBetween(player, pblock) == true then
+		if isKeyPressed("W") then translate(player, {0.0, 0.5, 0.0}, "local") end
+		if isKeyPressed("S") then translate(player, {0.0, -0.5, 0.0}, "local") end
+		if isKeyPressed("A") then translate(player, {-0.5, 0.0, 0.0}, "local") end
+		if isKeyPressed("D") then translate(player, {0.5, 0.0, 0.0}, "local") end
 		if isKeyPressed("LSHIFT") then translate(player, {0.0, 0.25, 0.0}, "local") end
-	end
+	-- end
 
 	if isKeyPressed("SPACE") then 
 
     	if isCollisionBetween(player, pblock) == true then 
     		-- translate(player, {0.0, 0.0, 2.0}, "local")
-    		addCentralForce(player, {0.0, 0.0, 200.0}, "global")
+    		addCentralForce(player, {0.0, 0.0, 2000.0}, "global")
     	end
 	end
 
     setGravity({0.0, 0.0, 0.0})
 
     if isCollisionBetween(player, pblock) ~= true then 
-    	addCentralForce(player, {0.0, 0.0, -10.0}, "global")
+    	addCentralForce(player, {0.0, 0.0, -100.0}, "global")
     end
 
 	-- if isKeyPressed("W") then addCentralForce(player, {0.0, 2000.0, 0.0}, "local") end

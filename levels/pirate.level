@@ -15,11 +15,11 @@
 		<Light name="Light0">
 			<active value="true" />
 			<transform 
-				position="-65.727539 76.478737 72.978867"
+				position="-65.727539 76.478737 838.401611"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="1.000000 1.000000 1.000000" />
 			<properties 
-				radius="1000.000000"
+				radius="10000.000000"
 				color="1.000000 1.000000 1.000000"
 				intensity="1.000000"
 				spotAngle="180.000000"
@@ -29,7 +29,7 @@
 		<Light name="Light1">
 			<active value="true" />
 			<transform 
-				position="71.571335 -60.419296 64.702553"
+				position="-407.247681 18.722862 527.526306"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="1.000000 1.000000 1.000000" />
 			<properties 
@@ -44,9 +44,9 @@
 			<active value="true" />
 			<transform 
 				parent="head"
-				position="4.106888 -14.442066 -0.703705"
+				position="4.106888 -12.807109 -0.703705"
 				rotation="90.000000 -0.000000 0.000000"
-				scale="10.189013 10.189014 10.189014" />
+				scale="2.000000 2.000000 2.000000" />
 			<properties 
 				clearColor="0.200000 0.300000 0.400000"
 				fogColor="1.000000 1.000000 1.000000"
@@ -65,7 +65,7 @@
 			<transform 
 				position="0.000000 0.000000 0.000000"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="5.000000 5.000000 5.000000" />
+				scale="50.000000 50.000000 50.000000" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -88,7 +88,7 @@
 			<transform 
 				position="0.000000 0.000000 0.000000"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="5.000000 5.000000 5.000000" />
+				scale="50.000000 50.000000 50.000000" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -111,7 +111,7 @@
 			<transform 
 				position="0.000000 0.000000 0.000000"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="5.000000 5.000000 5.000000" />
+				scale="50.000000 50.000000 50.000000" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -133,9 +133,9 @@
 			<active value="true" />
 			<transform 
 				parent="Feet"
-				position="0.000000 -0.000004 3.331963"
+				position="-0.000004 -0.091136 3.217896"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="2.241582 2.085647 0.504421" />
+				scale="1.250000 1.250000 0.500000" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -148,7 +148,7 @@
 			<transform 
 				position="0.000000 0.000000 0.000000"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="5.000000 5.000000 5.000000" />
+				scale="50.000000 50.000000 50.000000" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -159,9 +159,9 @@
 			<anim id="0" />
 			<active value="true" />
 			<transform 
-				position="12.986405 -6.362905 48.600002"
+				position="12.986404 -6.288122 512.998169"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="0.100000 0.100000 0.400000" />
+				scale="0.800000 0.800000 2.000000" />
 			<properties 
 				invisible="true"
 				shadow="true"
@@ -193,7 +193,7 @@
 				parent="bob"
 				position="-0.014023 0.003038 -4.370071"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="0.446113 0.479467 0.495618" />
+				scale="0.500000 0.500000 0.500000" />
 			<properties 
 				invisible="true"
 				shadow="true"
