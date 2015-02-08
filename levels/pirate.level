@@ -132,14 +132,20 @@
 			<anim id="0" />
 			<active value="true" />
 			<transform 
-				parent="Feet"
-				position="-0.000004 -0.091136 3.217896"
+				position="12.986404 -6.288122 493.558868"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="1.250000 1.250000 0.500000" />
+				scale="1.000000 1.000000 1.000000" />
 			<properties 
 				invisible="false"
 				shadow="true"
 				occluder="false" />
+			<Behavior name="Follow">
+				<properties 
+					target="Feet"
+					delay="0.000000"
+					offset="0.000000 0.000000 6.500000"
+					local="false" />
+			</Behavior>
 		</Entity>
 		<Entity name="Entity3" file="../meshs/person.mesh">
 			<BoundingBox min="5.644352 7.498306 14.084907" max="5.697508 7.551462 14.263642" />
@@ -159,7 +165,7 @@
 			<anim id="0" />
 			<active value="true" />
 			<transform 
-				position="12.986404 -6.288122 512.998169"
+				position="12.986404 -6.288122 487.058868"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="0.800000 0.800000 2.000000" />
 			<properties 
@@ -191,7 +197,7 @@
 			<active value="true" />
 			<transform 
 				parent="bob"
-				position="-0.014023 0.003038 -4.370071"
+				position="-0.000032 -0.034249 -4.564789"
 				rotation="0.000000 -0.000000 0.000000"
 				scale="0.500000 0.500000 0.500000" />
 			<properties 
