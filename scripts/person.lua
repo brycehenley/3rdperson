@@ -16,6 +16,8 @@ window = getWindowScale()
 mx = getAxis("MOUSE_X")
 my = getAxis("MOUSE_Y")
 
+speed = 0.0
+
 setGravity({0.0, 0.0, 0.0})
 
 function onSceneUpdate()
@@ -36,6 +38,11 @@ function onSceneUpdate()
 	-- if isCollisionBetween(player, pblock) == true then
 		if isKeyPressed("W") then 
 			translate(player, {0.0, 0.5, 0.0}, "local")
+			
+			-- ANIMATION CONTROL
+			changeAnimation(bob, "1")
+			setAnimationSpeed(bob, 0.4)
+
 		end
 		
 
@@ -83,12 +90,6 @@ function onSceneUpdate()
 	-- if isKeyPressed("D") then addCentralForce(player, {1000.0, 0.0, 0.0}, "local") end
     -- if isKeyPressed("SPACE") then addCentralForce(player, {0.0, 0.0, 200.0}, "local") end
   	
-  	-- ANIMATION CONTROL
-	if onKeyDown("W") then
-		changeAnimation(bob, "1")
-	end
-
-
 	-- if isKeyPressed("SPACE") then translate(camera, {0.0, 0.3, 0.0}, "local") end
 	
 	-- if isKeyPressed("C") then translate(camera, {0.0, -0.3, 0.0}, "local") end
