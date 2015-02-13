@@ -21,6 +21,9 @@ speed = 0.0
 setGravity({0.0, 0.0, 0.0})
 
 function onSceneUpdate()
+	-- ANIMATION CONTROL
+	setAnimationSpeed(bob, 0.4)
+
 
 	if isKeyPressed("ESCAPE") then quit() end
 
@@ -39,10 +42,8 @@ function onSceneUpdate()
 		if isKeyPressed("W") then 
 			translate(player, {0.0, 0.5, 0.0}, "local")
 			
-			-- ANIMATION CONTROL
+			-- start walking animation
 			changeAnimation(bob, "1")
-			setAnimationSpeed(bob, 0.4)
-
 		end
 		
 
@@ -68,10 +69,12 @@ function onSceneUpdate()
 
 	if isKeyPressed("SPACE") then 
 
-    	if isCollisionBetween(player, pblock) == true then 
-    		-- translate(player, {0.0, 0.0, 2.0}, "local")
-    		addCentralForce(player, {0.0, 0.0, 1000}, "local")
-    	end
+		changeAnimation(bob, "2")
+
+    	-- if isCollisionBetween(player, pblock) == true then 
+    	-- 	-- translate(player, {0.0, 0.0, 2.0}, "local")
+    	-- 	addCentralForce(player, {0.0, 0.0, 1000}, "local")
+    	-- end
 	end
 
     if isCollisionBetween(player, pblock) == false then
