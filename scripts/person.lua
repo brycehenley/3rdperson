@@ -85,7 +85,7 @@ function onSceneUpdate()
   	
   	-- ANIMATION CONTROL
 	if onKeyDown("W") then
-		changeAnimation(bob, "3")
+		changeAnimation(bob, "1")
 	end
 
 
