@@ -7,6 +7,9 @@ bob = getObject("bob")
 head = getObject("head")
 pblock = getObject("Entity0")
 
+walking = false
+walkjump = false
+
 isKeyInput = false
 dx = 0.0
 dy = 0.0
@@ -43,33 +46,59 @@ function onSceneUpdate()
 			translate(player, {0.0, 0.5, 0.0}, "local")
 			
 			-- start walking animation
-			changeAnimation(bob, "1")
+			walking = true
+			
+			if onKeyDown("SPACE") then 
+				walkjump = true
+			end
+
+			if walkjump == true then
+				changeAnimation(bob, "3")
+				if isAnimationOver(bob) then
+					walkjump = false
+				end
+			else
+				changeAnimation(bob, "1")
+			end
+		end
+
+		if onKeyUp("W") then
+			walking = false
+			--blend animation to idle
 		end
 		
 
 		if isKeyPressed("S") then 
 			translate(player, {0.0, -0.5, 0.0}, "local") 
+			changeAnimation(bob, "1")
 		end
 		
 
 		if isKeyPressed("A") then 
 			translate(player, {-0.5, 0.0, 0.0}, "local") 
+			changeAnimation(bob, "1")
 		end
 		
 
 		if isKeyPressed("D") then 
-			translate(player, {0.5, 0.0, 0.0}, "local") 
+			translate(player, {0.5, 0.0, 0.0}, "local")
+			changeAnimation(bob, "1") 
 		end
 		
 
 		if isKeyPressed("LSHIFT") then 
-			translate(player, {0.0, 0.25, 0.0}, "local") 
+			if walking == true then
+			translate(player, {0.0, 0.25, 0.0}, "local")
+			 setAnimationSpeed(bob, 0.6) 
+			end
 		end
 	-- end
 
-	if isKeyPressed("SPACE") then 
+	if onKeyDown("SPACE") then 
 
-		changeAnimation(bob, "2")
+		if walking == false then
+			changeAnimation(bob, "2")
+		end
 
     	-- if isCollisionBetween(player, pblock) == true then 
     	-- 	-- translate(player, {0.0, 0.0, 2.0}, "local")
