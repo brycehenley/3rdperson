@@ -128,7 +128,7 @@
 				linearFactor="1.000000 1.000000 1.000000" />
 		</Entity>
 		<Entity name="bob" file="../meshs/robotMESH.mesh">
-			<BoundingBox min="-4.108617 -6.174382 -10.120786" max="2.929595 3.050368 11.495253" />
+			<BoundingBox min="-4.109886 -4.667452 -10.228841" max="2.687855 2.027630 11.493528" />
 			<anim id="0" />
 			<active value="true" />
 			<transform 
