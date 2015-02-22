@@ -44,12 +44,20 @@ function onSceneUpdate()
 	-- if isCollisionBetween(player, pblock) == true then
 		if isKeyPressed("W") then 
 			translate(player, {0.0, 0.5, 0.0}, "local")
+
+			if isCollisionBetween(player, pblock) == false then
+    			addCentralForce(player, {0.0, 0.0, -50}, "local")
+    		end
+    
 			
 			-- start walking animation
 			walking = true
 			
 			if onKeyDown("SPACE") then 
 				walkjump = true
+
+			
+    
 			end
 
 			if walkjump == true then
@@ -65,6 +73,12 @@ function onSceneUpdate()
 		if onKeyUp("W") then
 			walking = false
 			--blend animation to idle
+
+			--fixes slope sliding
+    		if isCollisionBetween(player, pblock) == true then
+    			clearForces(player)
+    		end
+
 		end
 		
 
@@ -100,16 +114,15 @@ function onSceneUpdate()
 			changeAnimation(bob, "2")
 		end
 
+		if isCollisionBetween(player, pblock) == false then
+    		addCentralForce(player, {0.0, 0.0, -50}, "local")
+    	end
+
     	-- if isCollisionBetween(player, pblock) == true then 
     	-- 	-- translate(player, {0.0, 0.0, 2.0}, "local")
     	-- 	addCentralForce(player, {0.0, 0.0, 1000}, "local")
     	-- end
 	end
-
-    if isCollisionBetween(player, pblock) == false then
-    	addCentralForce(player, {0.0, 0.0, -50}, "local")
-    end
-    
 
     -- if isCollisionBetween(player, pblock) ~= true then 
     -- 	addCentralForce(player, {0.0, 0.0, -100.0}, "global")
