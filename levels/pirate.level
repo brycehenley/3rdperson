@@ -44,7 +44,7 @@
 			<active value="true" />
 			<transform 
 				parent="head"
-				position="4.106888 -12.807109 -0.703705"
+				position="-0.894638 -46.150757 21.320312"
 				rotation="90.000000 -0.000000 0.000000"
 				scale="2.000000 2.000000 2.000000" />
 			<properties 
@@ -128,13 +128,13 @@
 				linearFactor="1.000000 1.000000 1.000000" />
 		</Entity>
 		<Entity name="bob" file="../meshs/robotMESH.mesh">
-			<BoundingBox min="-0.888043 -0.671408 -8.611580" max="0.950836 0.984874 -4.280010" />
+			<BoundingBox min="-4.109886 -4.667452 -10.228841" max="2.687855 2.027630 11.493528" />
 			<anim id="0" />
 			<active value="true" />
 			<transform 
-				position="12.986404 -6.288122 493.558868"
+				position="12.986404 -6.288122 487.058868"
 				rotation="0.000000 -0.000000 0.000000"
-				scale="1.000000 1.000000 1.000000" />
+				scale="0.200000 0.200000 0.200000" />
 			<properties 
 				invisible="false"
 				shadow="true"
@@ -143,7 +143,7 @@
 				<properties 
 					target="Feet"
 					delay="0.000000"
-					offset="0.000000 0.000000 6.500000"
+					offset="0.000000 0.000000 0.000000"
 					local="false" />
 			</Behavior>
 		</Entity>
