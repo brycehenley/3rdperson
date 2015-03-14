@@ -36,23 +36,47 @@ function onSceneUpdate()
 	-- if isCollisionBetween(player, pblock) == true then
 		if isKeyPressed("W") then 
 			translate(player, {0.0, 0.5, 0.0}, "local")
+			addCentralForce(player, {0.0, 0.0, -50}, "local")
+			if isCollisionBetween(player, pblock) == true then
+				clearForces(player)
+			end
+		end
+		if onKeyUp("W") then
+			clearForces(player)
 		end
 		
-
 		if isKeyPressed("S") then 
-			translate(player, {0.0, -0.5, 0.0}, "local") 
+			translate(player, {0.0, -0.5, 0.0}, "local")
+			addCentralForce(player, {0.0, 0.0, -50}, "local")
+			if isCollisionBetween(player, pblock) == true then
+				clearForces(player)
+			end
 		end
-		
+		if onKeyUp("S") then
+			clearForces(player)
+		end
 
 		if isKeyPressed("A") then 
-			translate(player, {-0.5, 0.0, 0.0}, "local") 
+			translate(player, {-0.5, 0.0, 0.0}, "local")
+			addCentralForce(player, {0.0, 0.0, -50}, "local")
+			if isCollisionBetween(player, pblock) == true then
+				clearForces(player)
+			end
 		end
-		
+		if onKeyUp("A") then
+			clearForces(player)
+		end
 
 		if isKeyPressed("D") then 
-			translate(player, {0.5, 0.0, 0.0}, "local") 
+			translate(player, {0.5, 0.0, 0.0}, "local")
+			addCentralForce(player, {0.0, 0.0, -50}, "local")
+			if isCollisionBetween(player, pblock) == true then
+				clearForces(player)
+			end
 		end
-		
+		if onKeyUp("D") then
+			clearForces(player)
+		end
 
 		if isKeyPressed("LSHIFT") then 
 			translate(player, {0.0, 0.25, 0.0}, "local") 
@@ -67,9 +91,13 @@ function onSceneUpdate()
     	end
 	end
 
-    if isCollisionBetween(player, pblock) == false then
-    	addCentralForce(player, {0.0, 0.0, -50}, "local")
-    end
+	--Artificial gravity + slide prevetion
+
+	-- if tick == 1 then 
+ --    	addCentralForce(player, {0.0, 0.0, -50}, "local")
+ --    	tick = 0
+ --    	addtick = false
+ --    end
     
 
     -- if isCollisionBetween(player, pblock) ~= true then 
