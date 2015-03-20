@@ -20,6 +20,11 @@ setGravity({0.0, 0.0, 0.0})
 
 function onSceneUpdate()
 
+	-- Sets animation playback speed to acount for not being 60fps
+	setAnimationSpeed(bob, 0.4)
+
+
+
 	if isKeyPressed("ESCAPE") then quit() end
 
 	dx = getAxis("MOUSE_X") - mx
@@ -35,6 +40,7 @@ function onSceneUpdate()
 	-- CHARACTER CONTROLER
 	-- if isCollisionBetween(player, pblock) == true then
 		if isKeyPressed("W") then 
+			changeAnimation(bob, "1")
 			translate(player, {0.0, 0.5, 0.0}, "local")
 			addCentralForce(player, {0.0, 0.0, -50}, "local")
 			if isCollisionBetween(player, pblock) == true then
@@ -113,7 +119,7 @@ function onSceneUpdate()
   	
   	-- ANIMATION CONTROL
 	if onKeyDown("W") then
-		changeAnimation(bob, "3")
+		changeAnimation(bob, "1")
 	end
 
 
